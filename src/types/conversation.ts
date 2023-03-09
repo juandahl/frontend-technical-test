@@ -6,3 +6,11 @@ export interface Conversation {
   senderNickname: string,
   lastMessageTimestamp: number,
 }
+
+export interface GetConversationsInput {
+  UserId: number;
+}
+
+export interface GetAllConversationsInput {
+  UserId: number;
+}
