@@ -5,3 +5,7 @@ export interface Message {
   timestamp: number
   body: string
 }
+
+export interface GetAllMessagesInput {
+  conversationId: number;
+}
