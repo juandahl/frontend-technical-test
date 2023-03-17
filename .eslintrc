@@ -1,3 +1,14 @@
 {
-  "extends": ["next", "next/core-web-vitals"]
+  "extends": ["next", "next/core-web-vitals", "eslint-config-codely/typescript"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        // "@typescript-eslint/strict-boolean-expressions": "none"
+      }
+    }
+  ]
 }

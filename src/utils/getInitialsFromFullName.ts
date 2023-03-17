@@ -3,4 +3,8 @@
  * @param fullName example: Foo Bar
  * @returns example: FB
  */
-export const getInitialsFromFullName = (fullName: string) => fullName.split(" ").map((n)=>n[0]).join("");
+export const getInitialsFromFullName = (fullName: string): string =>
+	fullName
+		.split(" ")
+		.map((n) => n[0])
+		.join("");

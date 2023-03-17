@@ -1,7 +1,8 @@
 // Domain
 import ConversationRepository from "domain/conversations/ConversationReposiory";
 // Types
-import { GetConversationsInput, Conversation, GetAllConversationsInput } from "types/conversation";
+import { Conversation, GetAllConversationsInput } from "types/conversation";
+
 // Config
 import config from "../../config";
 
@@ -9,10 +10,11 @@ const endpoint = "conversations";
 const url = `${config.server.url}/${endpoint}`;
 
 export class ApiConversationRepository implements ConversationRepository {
-  async getAll(input: GetAllConversationsInput): Promise<Conversation[]> {
-		const conversations = await fetch(`${url}/${input.UserId}`).then(response => response.json())
+	async getAll(input: GetAllConversationsInput): Promise<Conversation[]> {
+		const response = await fetch(`${url}/${input.UserId}`);
+		const conversations = (await response.json()) as Conversation[];
 
-    return conversations;
+		return conversations;
 	}
 }
 

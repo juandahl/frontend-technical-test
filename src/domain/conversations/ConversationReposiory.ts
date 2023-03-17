@@ -1,4 +1,4 @@
-import { GetConversationsInput, Conversation, GetAllConversationsInput } from "types/conversation";
+import { Conversation, GetAllConversationsInput } from "types/conversation";
 
 interface ConversationRepository {
 	getAll(input: GetAllConversationsInput): Promise<Conversation[]>;

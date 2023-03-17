@@ -1,4 +1,4 @@
-import { Message, GetAllMessagesInput } from "types/message";
+import { GetAllMessagesInput, Message } from "types/message";
 
 interface MessageRepository {
 	getAll(input: GetAllMessagesInput): Promise<Message[]>;

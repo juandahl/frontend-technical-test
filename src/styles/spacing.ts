@@ -7,5 +7,11 @@ const lg = "2rem";
 const xl = "3rem";
 
 export const spacing = {
-  tiny, xxs, xs, sm, md, lg, xl
+	tiny,
+	xxs,
+	xs,
+	sm,
+	md,
+	lg,
+	xl,
 } as const;

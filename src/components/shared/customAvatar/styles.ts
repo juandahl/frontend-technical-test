@@ -1,15 +1,19 @@
-import styled from 'styled-components';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import styled from "styled-components";
 
-export const Avatar = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+type Styled = unknown;
 
-  width: 3.125rem;
-  height: 3.125rem;
+export const Avatar: Styled = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  border-radius: 50%;
+	width: 3.125rem;
+	height: 3.125rem;
 
-  background: #b0cde8;
-  border: 1px solid #25537e;
-`
+	border-radius: 50%;
+
+	background: #b0cde8;
+	border: 1px solid #25537e;
+`;
